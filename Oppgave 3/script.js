@@ -2,7 +2,7 @@
     let score = 0;
 
     // 2. Grab references to all moles
-    const moles = document.getElementsByClassName("moles");
+    const moles = document.getElementsByClassName("mole");
 
     // 3. Function to show one random mole at a time
     function showRandomMole() {
