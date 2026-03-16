@@ -12,7 +12,7 @@
       }
 
       // Show a random one
-      const randomIndex = Math.floor(Math.random() * moles.lenght); 
+      const randomIndex = Math.floor(Math.random() * moles.length); 
       moles[randomIndex].style.display = "block";
     }
 
