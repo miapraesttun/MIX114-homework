@@ -8,11 +8,11 @@ let result=splitLines("A\nB\nC");
 console.log(result)
 
 //1b
-function tallListe(liste){
+function numberList(liste){
     return liste.map(tekst => Number(tekst));
 }
 
-let resultat = tallListe(["1.2","-3.4","5.6"]);
+let resultat = numberList(["1.2","-3.4","5.6"]);
 console.log(resultat);
 
 
