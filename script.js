@@ -7,6 +7,15 @@ function splitLines(text){
 let result=splitLines("A\nB\nC");
 console.log(result)
 
+//1b
+function tallListe(liste){
+    return liste.map(tekst => Number(tekst));
+}
+
+let resultat = tallListe(["1.2","-3.4","5.6"]);
+console.log(resultat);
+
+
 
 //oppgave 1c
 function pairSums(numbers){
@@ -23,3 +32,43 @@ function pairSums(numbers){
 }
 
 pairSums([2,3,4,2]);
+
+
+//2
+
+//2
+
+function addTask() {
+    const input = document.getElementById("taskInput");
+    const taskText = input.value;
+
+    if (taskText === "") {
+        return;
+    }
+
+    const list = document.getElementById("taskList");
+
+    list.innerHTML += `
+        <li>
+            <input type="checkbox" onchange="toggleTask(this)">
+            <span>${taskText}</span>
+            <button onclick="deleteTask(this)">Delete</button>
+        </li>
+    `;
+
+    input.value = "";
+}
+
+function deleteTask(button) {
+    button.parentElement.remove();
+}
+
+function toggleTask(checkbox) {
+    const text = checkbox.nextElementSibling;
+
+    if (checkbox.checked) {
+        text.style.textDecoration = "line-through";
+    } else {
+        text.style.textDecoration = "none";
+    }
+}
